@@ -1,6 +1,6 @@
 
 .cabecera{
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: 90px; /*90px*/
   top: 0;
@@ -17,4 +17,49 @@
   font-family: 'Staatliches', cursive;
   width: 225px; /*350px*/
   border-bottom: 2px solid rgba(1,83,134,0.5);
+}
+
+.slide-titulo{
+  font-family: 'Baloo Bhai', cursive;
+}
+
+.contenedor-reservas{
+  width: 100%;
+  height: auto; 
+  background-color: #ffffff;
+}
+
+.contenedor-reservas--formulario{
+  width: 70%;
+  margin: 70px auto;
+  height: 100%;
+  text-align: center;
+}
+.contenedor-reservas--formulario h1{
+  font-size: 28px;
+  font-family: 'Baloo Bhai', cursive;
+}
+
+.contenedor-reservas--formulario p{
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.contenedor-reservas--formulario form{
+  margin-top: 20px;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  text-align: justify;
+}
+
+.contenedor-campo{
+  margin: 14px 0;
+}
+
+.contenedor-campo input{
+  width: 100%;
+  height: 30px;
+  border: 1.5px solid rgba(0,0,0,0.35);
+  border-radius: 2px;
+  margin-top: 6px;
 }
