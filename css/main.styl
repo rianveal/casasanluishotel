@@ -1,0 +1,135 @@
+
+.cabecera
+  position absolute
+  width 100%
+  height 90px
+  top 0
+  left 0
+  z-index 1000
+  h1
+    color rgb(1, 83, 134)
+    font-size 30px
+    margin-top 30px
+    margin-left 10px
+    text-align justify
+    font-family: 'Staatliches', cursive
+    width 225px
+    border-bottom 2px solid rgba(1,83,134,0.5)
+  span
+    position absolute
+    top 30px
+    right 15px
+    color rgba(1,83,134,1)
+    text-align center
+    i
+      font-size 30px
+    p
+      font-size 14px
+      font-weight 700 
+      font-family 'Roboto', sans-serif 
+
+.overlay-reserva
+  display none
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100vh
+  background-color rgba(255,255,255,.96)
+  z-index 1001
+  &--contenedor
+    position relative
+    width 100%
+    height 100%
+    overflow-y auto
+    .cerrar
+      position fixed
+      top 20px
+      right 15px
+      width 40px
+      height 40px
+      border-radius 50%
+      background-color #da5555
+      color #ffffff
+      text-align center
+      line-height 60px  
+      z-index 1003
+
+.contenedor-reservas
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+  width 100%
+  height auto
+  margin 60px 0
+  
+
+.contenedor-reservas--formulario
+  width 70%
+  margin 0 auto
+  height 100%
+  h1
+    font-size 28px
+    font-family 'Baloo Bhai', cursive
+    color rgba(1,83,134,1)
+    text-align center
+  p
+    font-size 16px
+    font-family 'Roboto', sans-serif
+    text-align center
+  form
+    margin-top 20px
+    font-size 16px
+    font-family 'Roboto', sans-serif
+
+.contenedor-campo
+  margin 14px 0
+  > input, select
+      width 100%
+      height 35px
+      border none
+      border 1.5px solid rgba(0,0,0,.15)
+      border-radius 4px
+      margin-top 6px
+      text-align center
+      padding 0 3px
+      transition all .3s ease-in-out
+      &:focus
+        border-color rgba(1,83,134,0.5)
+        outline 0px
+  > select
+    height 40px
+    padding 0
+    width 103%
+  > button
+    border none
+    border-radius 4px
+    background-color rgba(1,83,134,1)
+    color #ffffff
+    width 100px
+    height 40px
+    font-family 'Roboto', sans-serif
+
+
+.slide-titulo
+   font-family 'Baloo Bhai', cursive
+
+.contenedor-mensaje
+  display none
+  position absolute
+  top 10px
+  left 50%
+  transform translate(-50%, 0)
+  width 300px
+  height auto
+  padding 20px
+  border-radius 4px
+  background-color #263238
+  z-index 1004
+  p
+    color #ffffff
+    font-family 'Roboto', sans-serif
+    font-size 16px
+  
+

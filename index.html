@@ -9,14 +9,78 @@
   <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
 
   <div class="cabecera">
     <h1>CASA SAN LUIS HOTEL</h1>
+    <span id="reservar">
+      <i class="material-icons">local_play</i>
+      <p>reservar</p>
+    </span>
+  </div>
+
+  <div class="overlay-reserva">
+    <div class="overlay-reserva--contenedor">
+      <div class="cerrar"><i class="material-icons">close</i></div>
+      <div class="contenedor-reservas">
+        <div class="contenedor-reservas--formulario">
+            <h1>RESERVAS</h1>
+            <p>Deseo realizar reserva en este ESPECTACULAR HOTEL.</p>
+            <form action="">
+              <div class="contenedor-campo">
+                <label for="">Número de cedula</label>
+                <input type="number" name="numeroCedula" id="numeroCedula">
+              </div>
+              <div class="contenedor-campo">
+                <label for="">Nombre(s)</label>
+                <input type="text" name="nombres" id="nombres">
+              </div>
+              <div class="contenedor-campo">
+                <label for="">Apellido(s)</label>
+                <input type="text" name="apellidos" id="apellidos">
+              </div>
+              <div class="contenedor-campo">
+                <label for="">Correo electrónico</label>
+                <input type="email" name="correo" id="correo">
+              </div>
+              <div class="contenedor-campo">
+                <label for="">Número de contacto</label>
+                <input type="number" name="numeroContacto" id="numeroContacto">
+              </div>
+              <div class="contenedor-campo">
+                <label for="">Cantidad de personas</label>
+                <select name="cantidadPersonas" id="cantidadPersonas">
+                  <option value="" selected>Seleccionar</option>
+                  <option value="1">1</option><option value="2">2</option>
+                  <option value="3">3</option><option value="4">4</option>
+                  <option value="5">5</option><option value="6">6</option>
+                  <option value="7">7</option><option value="8">8</option>
+                  <option value="9">9</option><option value="10">10</option>
+                  <option value="+10">+10</option>
+                </select>
+              </div>
+              <div class="contenedor-campo">
+                <label for="">Cantidad de habitaciones</label>
+                <select name="cantidadHabitaciones" id="cantidadHabitaciones">
+                  <option value="" selected>Seleccionar</option>
+                  <option value="1">Sencilla, 1 cama</option>
+                  <option value="2">Sencilla, 2 camas</option>
+                  <option value="3">Doble, 2 camas</option>
+                  <option value="4">Doble, 4 camas</option>
+                </select>
+              </div>
+              <div class="contenedor-campo">
+                <button type="submit" id="btnReservar">RESERVAR</button>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
   </div>
   
   <div class="slider-container">
@@ -72,31 +136,13 @@
       </div>
     </div>
   </div>
-  <div class="contenedor-reservas">
-    <div class="contenedor-reservas--formulario">
-        <h1>RESERVAS</h1>
-        <p>Deseo reservar una noche en este ESPECTACULAR HOTEL.</p>
-        <form action="">
-          <div class="contenedor-campo">
-            <label for="">Nombre(s)</label>
-            <input type="text" name="" id="">
-          </div>
-          <div class="contenedor-campo">
-            <label for="">Apellido(s)</label>
-            <input type="text" name="" id="">
-          </div>
-        </form>
-    </div>
+  
+  <div class="contenedor-mensaje">
+    <p id="textoMensaje"></p>
   </div>
   <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-  
-
-    <script  src="js/index.js"></script>
-
-
-
-
+  <script  src="js/index.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>
