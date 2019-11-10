@@ -33,6 +33,40 @@
       font-family 'Roboto', sans-serif 
       text-transform uppercase
 
+.overlay-map
+  display none
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100vh
+  z-index 1006
+  background-color #ffffff
+  &--contenedor
+    padding 30px 0
+    width 90%
+    height 100%
+    margin 0 auto
+    .cerrar
+      width 100px
+      height 35px
+      background-color rgb(6, 71, 192)
+      color #ffffff
+      text-align center
+      line-height 35px
+      font-size 14px
+      border-radius 4px
+      font-family 'Roboto', sans-serif
+      text-transform uppercase
+    iframe 
+      width 100%
+      margin 15px 0
+    p
+      font-size 14px
+      font-family 'Roboto', sans-serif
+      margin 4px 0 
+      color rgb(6, 71, 192) 
+
 .overlay-reserva
   display none
   position absolute
@@ -48,7 +82,7 @@
     width 100%
     height 100%
     //overflow-y auto
-    .cerrar
+    .cerrar, .ubicacion
       position fixed
       top 20px
       right 15px
@@ -61,6 +95,9 @@
       line-height 60px  
       z-index 1003
       cursor pointer
+    .ubicacion
+      left 15px
+      background-color rgb(6, 71, 192)
 
 .contenedor-reservas
   position absolute
@@ -69,11 +106,11 @@
   transform translate(-50%, -50%)
   width 100%
   height auto
-  margin 90px auto
+  margin 150px auto 0 auto
   
 .contenedor-reservas--formulario
   width 70%
-  margin 0 auto 90px auto
+  margin 0 auto 100px auto
   height 100%
   h1
     font-size 28px
@@ -84,6 +121,12 @@
     font-size 16px
     font-family 'Roboto', sans-serif
     text-align center
+    margin 4px 0
+  p.contacto
+    font-family 'Roboto', sans-serif
+    color rgb(6, 71, 192)
+    font-size 14px
+    font-weight 700
   form
     margin-top 20px
     font-size 16px
@@ -159,12 +202,14 @@
 
   .overlay-reserva
     &--contenedor
-      .cerrar
+      .cerrar, .ubicacion
         top 25px
         right 35px
         width 50px
         height 50px
         line-height 70px 
+      .ubicacion
+        left 35px
 
   .contenedor-reservas
     margin 0
@@ -202,7 +247,11 @@
     font-size 43px  
 
   .contenedor-reservas--formulario
+    margin 100px auto
     form
       font-size 16px
 
+@media (min-width 1440px)      
+  .slide-titulo
+    font-size 53px 
   
