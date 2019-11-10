@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
   $('#reservar').on('click', function(){
-    console.log('....')
     if( $('.overlay-reserva').is(':hidden') ){
       $('.overlay-reserva').fadeIn()
       $('html, body').css('overflowY', 'hidden'); 
