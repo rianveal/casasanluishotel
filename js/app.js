@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+  $('.ubicacion').on('click', function(){
+    if( $('.overlay-map').is(':hidden') ){
+      $('.overlay-map').fadeIn()
+    }
+  })
+
   $('#reservar').on('click', function(){
     if( $('.overlay-reserva').is(':hidden') ){
       $('.overlay-reserva').fadeIn()
@@ -12,6 +18,10 @@ $(document).ready(function(){
   $('.overlay-reserva--contenedor > .cerrar').on('click', function(){
     $(this).parent().parent().fadeOut();
     $('html, body').css('overflowY', 'visible'); 
+  })
+
+  $('.overlay-map--contenedor > .cerrar').on('click', function(){
+    $(this).parent().parent().fadeOut();
   })
 
   var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;

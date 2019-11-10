@@ -15,6 +15,7 @@
   <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/main.min.css">
 </head>
@@ -28,14 +29,29 @@
       <p>reservar</p>
     </span>
   </div>
+  <!--
+    
+  -->
+
+  <div class="overlay-map">
+    <div class="overlay-map--contenedor">
+      <div class="cerrar">Volver</div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.9787584469104!2d-75.54851298468255!3d10.42326009256174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef62f9e176ba53f%3A0x70675d91ed9de580!2sCasa%20San%20Luis%20Hotel!5e0!3m2!1ses-419!2sco!4v1573397868200!5m2!1ses-419!2sco" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      <p>(+57) 3103547241 - (5) 663 0843</p>
+      <p>contacto@casasanluishotel.com</p>
+    </div>
+  </div>
 
   <div class="overlay-reserva">
     <div class="overlay-reserva--contenedor">
+      <div class="ubicacion animated tada infinite"><i class="material-icons">map</i></div>
       <div class="cerrar"><i class="material-icons">close</i></div>
       <div class="contenedor-reservas">
         <div class="contenedor-reservas--formulario">
             <h1>RESERVAS</h1>
             <p>Deseo realizar reserva en este ESPECTACULAR HOTEL.</p>
+            <p class="contacto">(+57) 3103547241 - (5) 663 0843</p>
+            <p class="contacto">contacto@casasanluishotel.com</p>
             <form action="email.php" method="POST">
               <div class="contenedor-campo">
                 <label for="">Número de cedula</label>
