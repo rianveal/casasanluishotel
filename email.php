@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="refresh" content="4; url=http://127.0.0.1:5500/index.html"/>
+  <meta http-equiv="refresh" content="4; url=https://rianveal.github.io/casasanluishotel/"/>
   <title>Casa San Luis Hotal | Send email</title>
   <style>
     body{
@@ -55,7 +55,7 @@
         <h2>Casa San Luis Hotel</h2>
         <div>
           <h3 style="color: #546E7A;">El sr(a). <span style="color: #263238;">'. strip_tags($_POST['nombres']) .'</span> cuyo correo electrónico es <span style="color: #263238;">'. strip_tags($_POST['correo']) .' y telefono(s) '. strip_tags($_POST['numeroContacto']) .'</span>  ha escrito el siguiente mensaje.</h3>
-          <h3 style="font-weight: 700; color= #263238;"> hola mundo'.'</h3>
+          <h3 style="font-weight: 700; color= #263238;"> hola mundo'. strip_tags($_POST['numeroCedula']) .'</h3>
         </div>
 
       </div>
@@ -68,7 +68,7 @@
 
     // Cabeceras adicionales
     $cabeceras .= 'To: rianveal@gmail.com' . "\r\n";
-    $cabeceras .= 'From: Contacto Web - Casa San Luis Hotel contacto@casasanluishotal.com' . "\r\n";
+    $cabeceras .= 'From: Contacto Web - Casa San Luis Hotel rianveal@hotmail.com' . "\r\n";
     $cabeceras .= 'Cc:' . "\r\n";
     $cabeceras .= 'Bcc:' . "\r\n";
 
