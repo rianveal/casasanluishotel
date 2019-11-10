@@ -148,13 +148,15 @@ svg {
   left: 0;
   /*background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-3.jpg");*/
   background-image: url('../images/Bienvenido.jpeg');
+  background-position: center;
 }
 .slide:nth-child(1) .slide__overlay-path {
-  fill: #e99c7e;
+  fill: #cbc6c3;
 }
 @media (max-width: 991px) {
   .slide:nth-child(1) .slide__text {
-    background-color: rgba(233, 156, 126, 0.8);
+    /*background-color: rgba(233, 156, 126, 0.8);*/
+    background-color: rgba(203,198,195,0.8);
   }
 }
 .slide:nth-child(2) {
@@ -166,11 +168,12 @@ svg {
   background-image: url('../images/Servicio.jpeg');
 }
 .slide:nth-child(2) .slide__overlay-path {
-  fill: #e1ccae;
+  fill: #cbc6c3;
 }
 @media (max-width: 991px) {
   .slide:nth-child(2) .slide__text {
-    background-color: rgba(225, 204, 174, 0.8);
+    /*background-color: rgba(225, 204, 174, 0.8);*/
+    background-color: rgba(203,198,195,0.8);
   }
 }
 .slide:nth-child(3) {
@@ -182,11 +185,12 @@ svg {
   background-image: url('../images/Comodidad.jpeg');
 }
 .slide:nth-child(3) .slide__overlay-path {
-  fill: #adc5cd;
+  fill: #cbc6c3;
 }
 @media (max-width: 991px) {
   .slide:nth-child(3) .slide__text {
-    background-color: rgba(173, 197, 205, 0.8);
+    /*background-color: rgba(173, 197, 205, 0.8);*/
+    background-color: rgba(203,198,195,0.8);
   }
 }
 .slide:nth-child(4) {
@@ -196,6 +200,7 @@ svg {
   left: -150%;
   /*background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/3d-slider-4.jpg");*/
   background-image: url('../images/Placer.jpeg');
+  background-position: center;
 }
 .slide:nth-child(4) .slide__overlay-path {
   fill: #cbc6c3;
@@ -239,7 +244,7 @@ svg {
   width: 25%;
   bottom: 15%;
   left: 12%;
-  color: #fff;
+  color: rgb(6, 71, 192);
   transition: opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s;
   transition: transform 0.5s 0.8s, opacity 0.5s 0.8s;
   transition: transform 0.5s 0.8s, opacity 0.5s 0.8s, -webkit-transform 0.5s 0.8s;
