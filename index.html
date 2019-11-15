@@ -17,13 +17,41 @@
   <link href="https://fonts.googleapis.com/css?family=Great+Vibes&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/slide.css">
   <link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
 
-  <div class="cabecera">
+  <header id="top">
+		<div class="header-content">
+			<div class="header-logo">
+				<h1>Casa San Luis Hotel</h1>
+			</div>
+			<div class="header-menu--burger">
+				<div class="icon-menu--content">
+					<div class="icon-menu">
+						<small></small>
+						<small></small>
+						<small></small>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div class="overlay-menu">
+		<nav class="menu-options">
+			<ul>
+				<li class="animated fadeInDown"><a href="#we" class="item-menu">Promociones</a></li>
+				<li class="animated fadeInDown"><a href="#services" class="item-menu">Redes sociales</a></li>
+				<li class="animated fadeInDown"><a href="#projects" class="item-menu">Reservar</a></li>
+			</ul>
+		</div>
+	</nav>
+
+
+  <div class="cabecera" style="display: none;">
     <h1>Casa San Luis Hotel</h1>
     <span id="reservar">
       <i class="material-icons">local_play</i>
@@ -34,7 +62,7 @@
     
   -->
 
-  <div class="overlay-map">
+  <div class="overlay overlay-map">
     <div class="overlay-map--contenedor">
       <div class="cerrar">Volver</div>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.9787584469104!2d-75.54851298468255!3d10.42326009256174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ef62f9e176ba53f%3A0x70675d91ed9de580!2sCasa%20San%20Luis%20Hotel!5e0!3m2!1ses-419!2sco!4v1573397868200!5m2!1ses-419!2sco" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
@@ -43,7 +71,7 @@
     </div>
   </div>
 
-  <div class="overlay-reserva">
+  <div class="overlay overlay-reserva">
     <div class="overlay-reserva--contenedor">
       <div class="ubicacion animated tada infinite"><i class="material-icons">map</i></div>
       <div class="cerrar"><i class="material-icons">close</i></div>
@@ -157,6 +185,10 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="ofertas">
+    <div class="ofertas-content"></div>
   </div>
   
   <div class="contenedor-mensaje">

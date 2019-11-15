@@ -1,0 +1,258 @@
+
+.cabecera
+  position absolute
+  width 100%
+  height 90px
+  top 0
+  left 0
+  z-index 1000
+  h1
+    color rgb(6, 71, 192)
+    font-size 28px
+    margin-top 30px
+    margin-left 10px
+    text-align justify
+    font-family 'Great Vibes', cursive
+    width 240px
+  span
+    position absolute
+    top 25px
+    right 15px
+    background-color rgb(6, 71, 192)
+    color #ffffff
+    text-align center
+    padding 4px 6px
+    border-radius 4px
+    cursor pointer
+    i
+      font-size 25px
+    p
+      font-size 9px
+      font-weight 700 
+      font-family 'Roboto', sans-serif 
+      text-transform uppercase
+
+.overlay-map
+  display none
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100vh
+  z-index 1006
+  background-color #ffffff
+  &--contenedor
+    padding 30px 0
+    width 90%
+    height 100%
+    margin 0 auto
+    .cerrar
+      width 100px
+      height 35px
+      background-color rgb(6, 71, 192)
+      color #ffffff
+      text-align center
+      line-height 35px
+      font-size 14px
+      border-radius 4px
+      font-family 'Roboto', sans-serif
+      text-transform uppercase
+      cursor pointer
+    iframe 
+      width 100%
+      margin 15px 0
+    p
+      font-size 14px
+      font-family 'Roboto', sans-serif
+      margin 4px 0 
+      color rgb(6, 71, 192) 
+
+.overlay-reserva
+  display none
+  position absolute
+  top 0
+  left 0
+  width 100%
+  height 100vh
+  background-color rgba(255,255,255,.96)
+  z-index 1001
+  overflow-y auto
+  &--contenedor
+    position relative
+    width 100%
+    height 100%
+    //overflow-y auto
+    .cerrar, .ubicacion
+      position fixed
+      top 20px
+      right 15px
+      width 40px
+      height 40px
+      border-radius 50%
+      background-color #da5555
+      color #ffffff
+      text-align center
+      line-height 60px  
+      z-index 1003
+      cursor pointer
+    .ubicacion
+      left 15px
+      background-color rgb(6, 71, 192)
+
+.contenedor-reservas
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%, -50%)
+  width 100%
+  height auto
+  margin 150px auto 0 auto
+  
+.contenedor-reservas--formulario
+  width 70%
+  margin 0 auto 100px auto
+  height 100%
+  h1
+    font-size 28px
+    font-family 'Baloo Bhai', cursive
+    color rgb(6, 71, 192)
+    text-align center
+  p
+    font-size 16px
+    font-family 'Roboto', sans-serif
+    text-align center
+    margin 4px 0
+  p.contacto
+    font-family 'Roboto', sans-serif
+    color rgb(6, 71, 192)
+    font-size 14px
+    font-weight 700
+  form
+    margin-top 20px
+    font-size 16px
+    font-family 'Roboto', sans-serif
+
+.contenedor-campo
+  margin 14px 0
+  > input, select
+      width 100%
+      height 35px
+      border none
+      border 1.5px solid rgba(0,0,0,.15)
+      border-radius 4px
+      margin-top 6px
+      text-align center
+      padding 0 3px
+      transition all .3s ease-in-out
+      &:focus
+        border-color rgba(1,83,134,0.5)
+        outline 0px
+  > select
+    height 40px
+    padding 0
+    width 103%
+  > button
+    border none
+    border-radius 4px
+    background-color rgb(6, 71, 192)
+    color #ffffff
+    width 100px
+    height 40px
+    font-family 'Roboto', sans-serif
+    cursor pointer
+
+.slide-titulo
+   //font-family 'Baloo Bhai', cursive
+   font-family 'Great Vibes', cursive
+
+.contenedor-mensaje
+  display none
+  position absolute
+  top 10px
+  left 50%
+  transform translate(-50%, 0)
+  width 300px
+  height auto
+  padding 20px
+  border-radius 4px
+  background-color #263238
+  z-index 1004
+  p
+    color #ffffff
+    font-family 'Roboto', sans-serif
+    font-size 16px
+
+@media (min-width 768px)  
+  .cabecera
+    h1
+      margin-left 20px
+      font-size 40px
+      width 320px
+    span
+      top 25px
+      right 20px
+      padding 4px 8px
+      i
+        font-size 30px
+      p
+        font-size 13px
+
+  .slide-titulo
+    font-size 45px  
+
+  .overlay-reserva
+    &--contenedor
+      .cerrar, .ubicacion
+        top 25px
+        right 35px
+        width 50px
+        height 50px
+        line-height 70px 
+      .ubicacion
+        left 35px
+
+  .contenedor-reservas
+    margin 0
+
+  .contenedor-reservas--formulario
+    width 500px
+    h1
+      font-size 32px
+    form
+      display flex
+      justify-content space-between
+      flex-wrap wrap
+      font-size 18px
+
+  .contenedor-campo
+    width 47%
+    &:nth-child(8)
+      button
+        margin-top 26px
+        height 43px
+        font-size 16px
+        width 100%  
+    > input, select
+      width 100%
+      height 40px
+      margin-top 6px
+      padding 0 3px
+      font-size 16px 
+    > select
+      height 43px 
+
+@media (min-width 1024px)
+
+  .slide-titulo
+    font-size 55px  
+
+  .contenedor-reservas--formulario
+    margin 100px auto
+    form
+      font-size 16px
+
+@media (min-width 1440px)
+
+  .slide-titulo
+    font-size 60px 
+  
