@@ -44,11 +44,31 @@ $(document).ready(function(){
     var el = $(this)
     var width = window.innerWidth
     var navig = $('nav.menu-opt')
-    if( width < 1024 ){
+    if( width < 992 ){
     	$(iconMenu).removeClass('icon-menu--active')
       $(overlay).fadeOut('slow')	
     }else if( width >= 1024 ){}
   })
+
+  // Efecto de scroll en el body cuando se escoge una opción de usuario.
+  $('a[href*=#]').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var $target = $(this.hash);
+      $target = $target.length && $target || $('[name=' + this.hash.slice(1) +']');
+      if ($target.length) {
+        var targetOffset = $target.offset().top;
+        $('html,body').animate({scrollTop: targetOffset - 100}, 900);
+        return false;
+      }
+    }
+  });
+
+  // Método para el manejo de link en nueva pestaña
+  $('.external-link').click(function() {
+    url = $(this).attr("href");
+    window.open(url, '_blank');
+    return false;
+  });
 
   $('.ubicacion').on('click', function(){
     if( $('.overlay-map').is(':hidden') ){
@@ -76,7 +96,25 @@ $(document).ready(function(){
 
   var testEmail = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
   $('#btnReservar').on('click', function(){
-    if( $('#numeroCedula').val() === ''){
+    if( $('#checkin').val()  === ''){
+      mostrarMensaje('CHECK IN','checkin')
+      return false
+    }else if( $('#checkout').val()  === ''){
+      mostrarMensaje('CHECK OUT','checkout')
+      return false
+    }else if( $('#cantidadPersonas').val() === ''){
+      mostrarMensaje('CANTIDAD DE PERSONAS', 'cantidadPersonas')
+      return false
+    }else if( $('#numeroAdultos').val()  === ''){
+      mostrarMensaje('NÚMERO DE ADULTOS','numeroAdultos')
+      return false
+    }else if( $('#numeroNinos').val()  === ''){
+      mostrarMensaje('NUMERO DE NIÑOS','numeroNinos')
+      return false
+    }else if( $('#moneda').val()  === ''){
+      mostrarMensaje('MÓNEDA','moneda')
+      return false
+    }else if( $('#numeroCedula').val() === ''){
       mostrarMensaje('NÚMERO DE CEDULA','numeroCedula')
       return false
     }else if( $('#nombres').val() === ''){
@@ -90,9 +128,6 @@ $(document).ready(function(){
       return false
     }else if( $('#numeroContacto').val() === ''){
       mostrarMensaje('NÚMERO DE CONTACTO', 'numeroContacto')
-      return false
-    }else if( $('#cantidadPersonas').val() === ''){
-      mostrarMensaje('CANTIDAD DE PERSONAS', 'cantidadPersonas')
       return false
     }else if( $('#cantidadHabitaciones').val() === ''){
       mostrarMensaje('CANTIDAD DE HABITACIONES', 'cantidadHabitaciones')

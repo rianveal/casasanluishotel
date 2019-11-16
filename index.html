@@ -43,13 +43,11 @@
 	<div class="overlay-menu">
 		<nav class="menu-options">
 			<ul>
-				<li class="animated fadeInDown"><a href="#we" class="item-menu">Promociones</a></li>
-				<li class="animated fadeInDown"><a href="#services" class="item-menu">Redes sociales</a></li>
-				<li class="animated fadeInDown"><a href="#projects" class="item-menu">Reservar</a></li>
+				<li class="animated fadeInDown"><a href="#ofertas" class="item-menu">Ofertas</a></li>
+				<li class="animated fadeInDown"><a href="#projects" id="reservar" class="item-menu">Reservar</a></li>
 			</ul>
-		</div>
-	</nav>
-
+	  </nav>
+  </div>  
 
   <div class="cabecera" style="display: none;">
     <h1>Casa San Luis Hotel</h1>
@@ -58,9 +56,6 @@
       <p>reservar</p>
     </span>
   </div>
-  <!--
-    
-  -->
 
   <div class="overlay overlay-map">
     <div class="overlay-map--contenedor">
@@ -77,13 +72,51 @@
       <div class="cerrar"><i class="material-icons">close</i></div>
       <div class="contenedor-reservas">
         <div class="contenedor-reservas--formulario">
-            <h1>RESERVAS</h1>
+            <h1>Reservas</h1>
             <p>Deseo realizar reserva en este ESPECTACULAR HOTEL.</p>
             <p class="contacto">(+57) 3103547241 - (5) 663 0843</p>
             <p class="contacto">contacto@casasanluishotel.com</p>
             <form action="email.php" method="POST">
               <div class="contenedor-campo">
-                <label for="">Número de cedula</label>
+                <label for="">Check In</label>
+                <input type="date" name="checkin" id="checkin">
+              </div>
+              <div class="contenedor-campo">
+                <label for="">Check Out</label>
+                <input type="date" name="checkout" id="checkout">
+              </div>
+              <div class="contenedor-campo">
+                <label for="">Número de huespedes</label>
+                <select name="cantidadPersonas" id="cantidadPersonas">
+                  <option value="" selected>Seleccionar</option>
+                  <option value="1">1</option><option value="2">2</option>
+                  <option value="3">3</option><option value="4">4</option>
+                  <option value="5">5</option><option value="6">6</option>
+                  <option value="7">7</option><option value="8">8</option>
+                  <option value="9">9</option><option value="10">10</option>
+                  <option value="+10">+10</option>
+                </select>
+              </div>
+              <div class="contenedor-campo">
+                <label for="">Adultos</label>
+                <input type="number" name="numeroAdultos" id="numeroAdultos">
+              </div>
+              <div class="contenedor-campo">
+                <label for="">Niños (menores de 7 años)</label>
+                <input type="number" name="numeroNinos" id="numeroNinos">
+              </div>
+              <div class="contenedor-campo">
+                <label for="">Móneda</label>
+                <select name="moneda" id="moneda">
+                  <option value="" selected>Seleccionar</option>
+                  <option value="COP">COP</option><option value="USD">USD</option>
+                </select>
+              </div>
+              <div class="contenedor-campo">
+                  <label for=""><h1>Solicitante</h1></label>
+                </div>
+              <div class="contenedor-campo">
+                <label for="">Número de cédula</label>
                 <input type="number" name="numeroCedula" id="numeroCedula">
               </div>
               <div class="contenedor-campo">
@@ -101,18 +134,6 @@
               <div class="contenedor-campo">
                 <label for="">Número de contacto</label>
                 <input type="number" name="numeroContacto" id="numeroContacto">
-              </div>
-              <div class="contenedor-campo">
-                <label for="">Cantidad de personas</label>
-                <select name="cantidadPersonas" id="cantidadPersonas">
-                  <option value="" selected>Seleccionar</option>
-                  <option value="1">1</option><option value="2">2</option>
-                  <option value="3">3</option><option value="4">4</option>
-                  <option value="5">5</option><option value="6">6</option>
-                  <option value="7">7</option><option value="8">8</option>
-                  <option value="9">9</option><option value="10">10</option>
-                  <option value="+10">+10</option>
-                </select>
               </div>
               <div class="contenedor-campo">
                 <label for="">Cantidad de habitaciones</label>
@@ -187,7 +208,7 @@
     </div>
   </div>
 
-  <div class="ofertas">
+  <div class="ofertas" id="ofertas">
     <div class="ofertas-content">
       <h2>Ofertas</h2>
       <div class="caja">
@@ -204,7 +225,7 @@
   </div>
   <script src="js/jquery.min.js"></script>
   <script  src="js/index.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/app.min.js"></script>
 </body>
 
 </html>
