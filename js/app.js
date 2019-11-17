@@ -9,13 +9,13 @@ $(document).ready(function(){
   $(iconMenu).on('click', function(e) {
     e.preventDefault()
     var el = $(this)
-    if( width < 1024 ){
+    if( width < 992 ){
       if ($(overlay).is(':hidden')){
-        $('header').css('background-color', 'transparent')
+        //$('header').css('background-color', 'transparent')
         el.addClass('icon-menu--active')
         $(overlay).fadeIn('slow')
       }else{
-        $('header').css('background-color', 'rgba(0,0,0,0.25)')
+        //$('header').css('background-color', 'rgba(0,0,0,0.25)')
         el.removeClass('icon-menu--active')
         $(overlay).fadeOut('slow')
       }
@@ -70,14 +70,27 @@ $(document).ready(function(){
     return false;
   });
 
-  $('.ubicacion').on('click', function(){
+  $('.ubicacion-boton').on('click', function(){
     if( $('.overlay-map').is(':hidden') ){
       $('.overlay-map').fadeIn()
     }
   })
 
   $('#reservar').on('click', function(){
+    descripcionReserva = $(this).attr('name');
+    $('#descripcionReserva').val(descripcionReserva);
     if( $('.overlay-reserva').is(':hidden') ){
+      $('.overlay-reserva').fadeIn()
+      $('html, body').css('overflowY', 'hidden'); 
+    }else{
+      $('html, body').css('overflowY', 'visible'); 
+    }
+  })
+
+  $('#reservarOferta').on('click', function(){
+    if( $('.overlay-reserva').is(':hidden') ){
+      descripcionReserva = $(this).attr('name');
+      $('#descripcionReserva').val(descripcionReserva);
       $('.overlay-reserva').fadeIn()
       $('html, body').css('overflowY', 'hidden'); 
     }else{

@@ -51,11 +51,29 @@
     </head>
     <body>
       <div style="padding: 1em 0 0 0; text-align: justify;">
-        <p>Hola Sres.</p>
+        <p>Hola.</p>
         <h2>Casa San Luis Hotel</h2>
-        <div>
-          <h3 style="color: #546E7A;">El sr(a). <span style="color: #263238;">'. strip_tags($_POST['nombres']) .'</span> cuyo correo electrónico es <span style="color: #263238;">'. strip_tags($_POST['correo']) .' y telefono(s) '. strip_tags($_POST['numeroContacto']) .'</span>  ha escrito el siguiente mensaje.</h3>
-          <h3 style="font-weight: 700; color= #263238;"> hola mundo'. strip_tags($_POST['numeroCedula']) .'</h3>
+        <h3>Se ha realizado la siguiente solicitud de reserva</h3>
+        
+        <div style="color: #263238;">
+          <h5 style="color: #202A25;">Datos de la solicitud</h5>
+          <p>Check in : '. strip_tags($_POST['checkin']) .'</p>
+          <p>Check out : '. strip_tags($_POST['checkout']) .'</p>
+          <p>Número de huespedes : '. strip_tags($_POST['cantidadPersonas']) .'</p>
+          <p>Tipo habitación : '. strip_tags($_POST['cantidadHabitaciones']) .'</p>
+          <p>Adultos : '. strip_tags($_POST['numeroAdultos']) .'</p>
+          <p>Niños : '. strip_tags($_POST['numeroNinos']) .'</p>
+          <p>Moneda : '. strip_tags($_POST['moneda']) .'</p>
+
+          
+          <h5 style="color: #202A25;">Datos del solicitantes</h5>
+          <p>Documento : '. strip_tags($_POST['numeroCedula']) .'</p>
+          <p>Nombres : '. strip_tags($_POST['nombres']) .'</p>
+          <p>Apellidos : '. strip_tags($_POST['apellidos']) .'</p>
+          <p>Correo eléctronico : '. strip_tags($_POST['correo']) .'</p>
+          <p>Número de contacto : '. strip_tags($_POST['numeroContacto']) .'</p>
+          
+          
         </div>
 
       </div>
